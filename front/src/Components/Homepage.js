@@ -76,6 +76,9 @@ class HomePage extends React.Component {
       <th scope="col">Gender</th>
       <th scope="col">Salary</th>
       <th scope="col">Action</th>
+      <th scope="col">-</th>
+      <th scope="col">-</th>
+
     </tr>
   </thead>
   <tbody>
