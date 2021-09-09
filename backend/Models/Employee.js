@@ -5,11 +5,10 @@ const employees = new schema({
     name:{
         type:String,
         unique:true,
-        default:"Babuja"
     },
     dateOfBirth:{
-        type:String,
-        default:null
+        type:Date.short(),
+        default:Date.now
     },
     gender:{
         type:String,
@@ -19,7 +18,7 @@ const employees = new schema({
         type:Number,
         default:12000,
     }
-});
+},{timestamp:true});
 
 module.exports={
     Employee:mongoose.model("Employee",employees),

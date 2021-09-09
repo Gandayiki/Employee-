@@ -87,7 +87,7 @@ class HomePage extends React.Component {
       <tr>
         <th>{index}</th>
         <th>{employee.name}</th>
-        <th>{employee.birthOfDate}</th>
+        <th>{employee.dateOfBirth}</th>
         <th>{employee.gender}</th>
         <th>{employee.salary} </th>
         {/* <td>

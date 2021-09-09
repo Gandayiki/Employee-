@@ -43,7 +43,7 @@ import axios from 'axios'
         const {name,dateOfBirth,gender,salary} = this.state;
            const data = {
                name:name,
-               dateOfBirth:dateOfBirth.toString(),
+               dateOfBirth:dateOfBirth,
                gender:gender,
                salary:salary
            };
