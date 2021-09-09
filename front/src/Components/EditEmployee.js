@@ -13,7 +13,6 @@ import axios from 'axios'
             salary:"",
             errors:{}
         }
-        this.onSubmit = this.onSubmit.bind(this);
     }
 
     componentDidMount(){
@@ -39,10 +38,9 @@ import axios from 'axios'
     }
 
    
-    onSubmit =(e) =>{
+    onSubmit =() =>{
         const id = this.props.match.params.id;
         const {name,dateOfBirth,gender,salary} = this.state;
-        if(this.validate(name,dateOfBirth,gender,salary)){
            const data = {
                name:name,
                dateOfBirth:dateOfBirth.toString(),
@@ -55,7 +53,6 @@ import axios from 'axios'
                   alert("Edited Successefully!");
               }
            })
-        }
     }
 
    render() {
