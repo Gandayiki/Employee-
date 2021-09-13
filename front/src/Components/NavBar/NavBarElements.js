@@ -33,8 +33,8 @@ text-decoration:none;
 export const Logo = styled(Link) `
 ${NavLink}
  color :#fff;
- font-style:italic;
- font-size : 24px;
+ font-style:bold;
+ font-size : 32px;
 `;
 export const Menubars =styled(HiMenu) `
 display:none;

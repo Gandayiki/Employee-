@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-useless-constructor */
 import React from 'react'
 import HomePage from './Components/Homepage';
 import EditEmployee from './Components/EditEmployee';

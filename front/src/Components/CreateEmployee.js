@@ -49,6 +49,7 @@ import {setErrors} from '../Common/setErrors';
                }
                else{
                    res.status({success:false,err})
+                   alert("Error Happened is :", err);
                    this.setState({name:"",dateOfBirth:"",gender:"",salary:""});
                }
             })

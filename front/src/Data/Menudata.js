@@ -7,18 +7,23 @@
      
     },
     {
-        title:'Employee Management',
-        Link:'Employee Management',
+        title:'News Update',
+        Link:'News Update',
         path:'/'
        },
        {
         title:'Details',
         Link:'Details',
-        path:'/details'
+        path:'/details/:id'
        },
        {
         title:'Admin',
         Link:'Admin',
+        path:'/'
+       },
+       {
+        title:'Employee',
+        Link:'Employee',
         path:'/'
        }
        

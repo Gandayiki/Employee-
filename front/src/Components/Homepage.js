@@ -1,8 +1,4 @@
-/* eslint-disable no-undef */
-/* eslint-disable jsx-a11y/anchor-has-content */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-useless-constructor */
-import React from 'react'
+import React  from 'react'
 import axios from 'axios'
 import Home from '../Pages/Home/Home';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
@@ -13,6 +9,7 @@ class HomePage extends React.Component {
     this.state ={
       employees:[]
     }
+    
     this.onDelete = this.onDelete.bind(this);
   }
 
@@ -46,6 +43,29 @@ class HomePage extends React.Component {
       }
     });
    }
+
+   //Filter Data By Search 
+
+   filterContent(employees , searchTerm){
+     const result = employees.filter((employee)=>
+     employee.name.toLowerCase().includes(searchTerm) ||
+     employee._id.toLowerCase().includes(searchTerm) ||
+     employee.gender.toLowerCase().includes(searchTerm) ||
+     employee.salary.toString().includes(searchTerm.toString())
+     );
+     this.setState({employees:result});
+   }
+
+   //Handle Search 
+   handleTextSearch =(e)=>{
+     const searchTerm =  e.currentTarget.value
+     axios.get('http://localhost:2021/employees').then(res =>{
+      if(res.data.success){
+        this.filterContent(res.data.employees , searchTerm);
+      }
+        console.log("Employees:",this.state.employees)
+    });
+   }
  render(){
   return (
     <>
@@ -62,10 +82,13 @@ class HomePage extends React.Component {
 
 
     <div className = "container">
-      
-     <div>
        <h1> Employee Management System</h1>
-     </div>
+       <input className ="form-control"
+              type ="search"
+              placeholder="search"
+              name ="search"
+              onChange = {this.handleTextSearch}
+       />
 
 <table class="table">
   <thead>
@@ -90,18 +113,10 @@ class HomePage extends React.Component {
         <th>{employee.dateOfBirth}</th>
         <th>{employee.gender}</th>
         <th>{employee.salary} </th>
-        {/* <td>
-          <a className ="btn btn-success" href ="#">
-            <i className ="fas fa-plus-circle"></i> Add New</a>
-        </td> */}
         <td>
           <a className ="btn btn-warning" href ={`/edit/${employee._id}`} >
             <i className ="fas fa-edit"></i> Edit</a>
         </td>
-        {/* <td>
-          <a className ="btn btn-primary" href ="#">
-            <i className = "fas fa-pen-nib"></i> Update</a>
-        </td> */}
         <td>
           <a className ="btn btn-danger" href ={`/`} onClick ={()=>this.onDelete(employee._id)}>
           <i className = "far fa-trash-alt"></i> Delete</a>

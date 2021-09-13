@@ -1,8 +1,5 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/anchor-has-content */
-/* eslint-disable no-useless-constructor */
+
 import React, { Component } from 'react';
-//import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import axios from 'axios';
 
  class Details extends Component {
@@ -47,11 +44,11 @@ import axios from 'axios';
                    <i className="fas fa-igloo"></i>
                    Home</a>
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <a className =" btn btn-success" href ="#">
+                   <a className =" btn btn-success" href =" ">
                    <i className="fas fa-file-export"></i>
                    Export Data</a>
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <a className =" btn btn-success" href ="#">
+                   <a className =" btn btn-success" href =" ">
                    <i className="fas fa-print"></i>
                    Print Data</a>
             </div>
