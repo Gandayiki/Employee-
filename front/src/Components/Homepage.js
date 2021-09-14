@@ -93,7 +93,7 @@ class HomePage extends React.Component {
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">ObJect ID</th>
+      <th scope="col">Index ID</th>
       <th scope="col">Name </th>
       <th scope="col">Date Of Bith</th>
       <th scope="col">Gender</th>
@@ -129,10 +129,10 @@ class HomePage extends React.Component {
       ))} 
   </tbody>
  </table>
- <td>
-        <a className =" btn btn-success" href={`/add`} type ="submit">
-        <i className ="fas fa-plus-circle"></i> Add New Employee</a>
-        </td>
+        <div >
+            <a className =" btn btn-success" href={`/add`} type ="submit" >
+            <i className ="fas fa-plus-circle"></i> Add New Employee</a>
+        </div>
    </div>
     </>
   )

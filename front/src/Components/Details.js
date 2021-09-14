@@ -20,7 +20,6 @@ import axios from 'axios';
                  });
                  console.log("Employee: ",this.state.employee);
              }
-
          })
      }
     render() {

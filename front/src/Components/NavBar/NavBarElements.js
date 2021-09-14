@@ -25,16 +25,19 @@ export const NavLink = css `
 color:#fff;
 display:flex;
 align-items:center;
-padding : 0 1rem;
+padding : 0 2rem;
 height :100%;
 cursor: pointer;
+font-size: 24px;
+font-style:bold;
+font-family: Roboto Condensed;
 text-decoration:none;
 `;
 export const Logo = styled(Link) `
 ${NavLink}
  color :#fff;
  font-style:bold;
- font-size : 32px;
+ font-size : 42px;
 `;
 export const Menubars =styled(HiMenu) `
 display:none;
